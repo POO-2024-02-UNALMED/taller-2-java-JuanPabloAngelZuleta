@@ -6,11 +6,16 @@ public class Asiento {
 	int registro;
 	
 	
-	void cambiarColor(String color) {
-		if (color=="blanco" ||color=="negro" ||color=="amarillo" ||color=="verde" ||color=="rojo") {
-			this.color=color;
+	public boolean cambiarColor(String NuevoColor) {
+		String[] coloresp = {"rojo", "verde", "amarillo", "negro", "blanco"};
+		for (String n: coloresp) {
+			if (NuevoColor == n){
+				this.color = n;
+				return true;
+			}
 		}
+	return false;
 	}
 	
-
+	
 }
